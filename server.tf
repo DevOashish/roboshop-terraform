@@ -35,13 +35,18 @@ resource "aws_instance" "instance" {
   }
   }
 
-  resource "aws_route53_record" "default" {
-  zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
-  type    = "A"
-  ttl     = 30
-  records = [aws_instance.default.private_ip]
-}
+
+
+
+
+
+#   resource "aws_route53_record" "default" {
+#   zone_id = "Z006270827E18HEX0RQPW"
+#   name    = "frontend-dev.devoash.tech"
+#   type    = "A"
+#   ttl     = 30
+#   records = [aws_instance.default.private_ip]
+# }
 
 
 
