@@ -35,7 +35,7 @@ resource "aws_instance" "cart" {
 
 resource "aws_route53_record" "cart" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "cart-dev.devoash.tech"
   type    = "A"
   ttl     = 300
   records = [aws_instance.cart.private_ip]
@@ -52,7 +52,7 @@ resource "aws_instance" "catalogue" {
 
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "catalogue-dev.devoash.tech"
   type    = "A"
   ttl     = 300
   records = [aws_instance.catalogue.private_ip]
@@ -69,7 +69,7 @@ resource "aws_instance" "user" {
 
 resource "aws_route53_record" "user" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "user-dev.devoash.tech"
   type    = "A"
   ttl     = 300
   records = [aws_instance.user.private_ip]
@@ -86,7 +86,7 @@ resource "aws_instance" "mysql" {
 
 resource "aws_route53_record" "mysql" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "mysql-dev.devoash.tech"
   type    = "A"
   ttl     = 300
   records = [aws_instance.mysql.private_ip]
@@ -103,7 +103,7 @@ resource "aws_instance" "mongodb" {
 
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "mongodb-dev.devoash.tech"
   type    = "A"
   ttl     = 300
   records = [aws_instance.mongodb.private_ip]
@@ -120,7 +120,7 @@ resource "aws_instance" "rabbitmq" {
 
 resource "aws_route53_record" "rabbitmq" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "rabbitmq-dev.devoash.tech"
   type    = "A"
   ttl     = 300
   records = [aws_instance.rabbitmq.private_ip]
@@ -137,7 +137,7 @@ resource "aws_instance" "payment" {
 
 resource "aws_route53_record" "payment" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "payment-dev.devoash.tech"
   type    = "A"
   ttl     = 30
   records = [aws_instance.payment.private_ip]
@@ -154,7 +154,7 @@ resource "aws_instance" "shipping" {
 
 resource "aws_route53_record" "shipping" {
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "frontend-dev.devoash.tech"
+  name    = "shipping-dev.devoash.tech"
   type    = "A"
   ttl     = 30
   records = [aws_instance.shipping.private_ip]
