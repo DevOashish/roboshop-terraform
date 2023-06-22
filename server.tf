@@ -24,11 +24,7 @@ variable "components" {
   
 }
 
-variable "aws_route53_record" {
 
-  default = $[ "frontend" ]
-  
-}
 
 ########################################################################
 resource "aws_instance" "instance" {
@@ -42,13 +38,15 @@ resource "aws_instance" "instance" {
     Name = var.components[count.index]
   }
   }
-  resource "aws_route53_record" "" {
-  zone_id = "Z006270827E18HEX0RQPW"
-  name    = "${var.aws_route53_record}-dev.devoash.tech"
-  type    = "A"
-  ttl     = 30
-  records = [aws_instance.${var.aws_route53_record}.private_ip]
-}
+
+
+#   resource "aws_route53_record" "" {
+#   zone_id = "Z006270827E18HEX0RQPW"
+#   name    = "${var.aws_route53_record}-dev.devoash.tech"
+#   type    = "A"
+#   ttl     = 30
+#   records = [aws_instance.${var.aws_route53_record}.private_ip]
+# }
 
 
 
