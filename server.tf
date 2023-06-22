@@ -6,9 +6,9 @@ data "aws_ami" "centos" {
 
 }
 
-data "aws_security_group" "allow-all" {
-  name = "allow-all"
-}
+# data "aws_security_group" "allow-all" {
+#   name = "allow-all"
+# }
 
 variable "instance_type" {
   default = "t3.micro"
@@ -26,7 +26,7 @@ resource "aws_route53_record" "frontend" {
 resource "aws_instance" "frontend" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [ data.aws_security_group.allow-all.id]
+
 
   tags = {
     Name = "frontend"
@@ -36,7 +36,7 @@ resource "aws_instance" "frontend" {
 resource "aws_instance" "cart" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-    vpc_security_group_ids = [ data.aws_security_group.allow-all ]
+  
 
 
   tags = {
