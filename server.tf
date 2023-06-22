@@ -7,7 +7,7 @@ data "aws_ami" "centos" {
 }
 
 resource "aws_instance" "frontend" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -16,7 +16,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_instance" "cart" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -25,7 +25,7 @@ resource "aws_instance" "cart" {
 }
 
 resource "aws_instance" "catalogue" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -34,7 +34,7 @@ resource "aws_instance" "catalogue" {
 }
 
 resource "aws_instance" "user" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -43,7 +43,7 @@ resource "aws_instance" "user" {
 }
 
 resource "aws_instance" "mysql" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -52,7 +52,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_instance" "mongodb" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -61,7 +61,7 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "aws_instance" "rabbitmq" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -70,7 +70,7 @@ resource "aws_instance" "rabbitmq" {
 }
 
 resource "aws_instance" "payment" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -79,7 +79,7 @@ resource "aws_instance" "payment" {
 }
 
 resource "aws_instance" "shipping" {
-  ami = "data.aws_ami.centos.image.id"
+  ami = data.aws_ami.centos.image.id
   instance_type = "t3.micro"
 
   tags = {
@@ -88,7 +88,7 @@ resource "aws_instance" "shipping" {
 }
 
 # resource "aws_instance" "web" {
-#   ami = "data.aws_ami.centos.image.id"
+#   ami = data.aws_ami.centos.image.id
 #   instance_type = "t3.micro"
 
 #   tags = {
@@ -97,7 +97,7 @@ resource "aws_instance" "shipping" {
 # }
 
 # resource "aws_instance" "web" {
-#   ami = "data.aws_ami.centos.image.id"
+#   ami = data.aws_ami.centos.image.id
 #   instance_type = "t3.micro"
 
 #   tags = {
@@ -106,7 +106,7 @@ resource "aws_instance" "shipping" {
 # }
 
 # resource "aws_instance" "web" {
-#   ami = "data.aws_ami.centos.image.id"
+#   ami = data.aws_ami.centos.image.id
 #   instance_type = "t3.micro"
 
 #   tags = {
