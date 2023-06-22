@@ -15,7 +15,7 @@ data "aws_security_group" "allow-all" {
 variable "instance_type" {
   default = "t3.micro"
 }
-
+##########################################################################
 resource "aws_route53_record" "frontend" {
   zone_id = "Z006270827E18HEX0RQPW"
   name    = "frontend-dev.devoash.tech"
@@ -31,14 +31,12 @@ resource "aws_instance" "frontend" {
   vpc_security_group_ids = [ data.aws_security_group.allow-all.id ]
 
 
-  }
-
-
+}
 
   tags = {
     Name = "frontend"
   }
-}
+
 ############################################################################################
 resource "aws_instance" "cart" {
   ami = data.aws_ami.centos.image_id
