@@ -33,7 +33,7 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
-
+############################################################################################
 resource "aws_instance" "cart" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -53,6 +53,8 @@ resource "aws_route53_record" "cart" {
   records = [aws_instance.cart.private_ip]
 }
 
+##########################################################################################
+
 resource "aws_instance" "catalogue" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -70,6 +72,7 @@ resource "aws_route53_record" "catalogue" {
   records = [aws_instance.catalogue.private_ip]
 }
 
+###############################################################################
 resource "aws_instance" "user" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -86,6 +89,8 @@ resource "aws_route53_record" "user" {
   ttl     = 300
   records = [aws_instance.user.private_ip]
 }
+
+#############################################################################
 
 resource "aws_instance" "mysql" {
   ami = data.aws_ami.centos.image_id
@@ -104,6 +109,8 @@ resource "aws_route53_record" "mysql" {
   records = [aws_instance.mysql.private_ip]
 }
 
+#############################################################################
+
 resource "aws_instance" "mongodb" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -120,6 +127,8 @@ resource "aws_route53_record" "mongodb" {
   ttl     = 300
   records = [aws_instance.mongodb.private_ip]
 }
+
+############################################################################
 
 resource "aws_instance" "rabbitmq" {
   ami = data.aws_ami.centos.image_id
@@ -138,6 +147,8 @@ resource "aws_route53_record" "rabbitmq" {
   records = [aws_instance.rabbitmq.private_ip]
 }
 
+###########################################################################
+
 resource "aws_instance" "payment" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -155,6 +166,8 @@ resource "aws_route53_record" "payment" {
   records = [aws_instance.payment.private_ip]
 }
 
+#############################################################################
+
 resource "aws_instance" "shipping" {
   ami = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -171,6 +184,7 @@ resource "aws_route53_record" "shipping" {
   ttl     = 30
   records = [aws_instance.shipping.private_ip]
 }
+###############################################################################
 
 # resource "aws_instance" "web" {
 #   ami = data.aws_ami.centos.image.id
