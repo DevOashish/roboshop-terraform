@@ -18,7 +18,7 @@ variable "instance_type" {
 
 variable "components" {
 
-  default = [ "frontend", "mongodb". "cart", "catalogue", "mysql", "shipping", "payment", "rabbitmq", "user" ]
+  default = [ "frontend", "mongodb", "cart", "catalogue", "mysql", "shipping", "payment", "rabbitmq", "user" ]
   
 }
 
