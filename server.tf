@@ -26,7 +26,7 @@ variable "components" {
 
 variable "aws_route53_record" {
 
-  default = [ "frontend" ]
+  default = ${"frontend"}
   
 }
 
