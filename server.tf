@@ -11,9 +11,6 @@ data "aws_security_group" "allow-all" {
 
 }
 
- output "aws_security_group" {
-    value = ${data.aws_security_group.allow-all}
-
 
 variable "instance_type" {
   default = "t3.micro"
