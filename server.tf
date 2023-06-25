@@ -7,7 +7,7 @@ data "aws_security_group" "allow-all" {
 resource "aws_route53_record" "records" {
   for_each               = var.components
   zone_id = "Z006270827E18HEX0RQPW"
-  name    = "${each.value["name"]}-dev.devoash.tech.online"
+  name    = "${each.value["name"]}-dev.devoash.tech"
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance[each.value["name"]].private_ip]
