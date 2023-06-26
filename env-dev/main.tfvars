@@ -31,6 +31,7 @@ components = {
     shipping = {
       name          = "shipping"
       instance_type = "t3.medium"
+      password      = "Roboshop@1"
     }
     rabbitmq = {
       name          = "rabbitmq"
