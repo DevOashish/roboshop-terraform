@@ -6,11 +6,12 @@ resource "aws_instance" "instance" {
 
 
   tags = {
-    Name = var.components_name
+    Name = local.name
   }
   }
 
 resource "null_resource" "provisioner" {
+  count = var.provisioner ? 1 : 0
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
 #   for_each = var.components
