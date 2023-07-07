@@ -13,7 +13,7 @@ module "databases_servers" {
 
 
 module "application_servers" {
-  depends_on = [ module.databases_servers ]
+  depends_on = [module.databases_servers]
   for_each = var.application_servers
   source = "./module"
   components_name = each.value["name"]
