@@ -30,7 +30,7 @@ resource "null_resource" "provisioner" {
       "rm -rf roboshop-shell",
       "git clone https://github.com/DevOashish/roboshop-shell.git ",
       "cd roboshop-shell",
-      "sudo bash ${var.components_name}.sh ${var.password}"
+      "sudo bash ${var.component_name}.sh ${var.password}"
     ]
   }
 }
