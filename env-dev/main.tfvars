@@ -35,7 +35,7 @@ application_servers = {
 env="dev"
 
 
-databases_servers = {
+database_servers = {
   rabbitmq = {
       name          = "rabbitmq"
       instance_type = "t3.small"
