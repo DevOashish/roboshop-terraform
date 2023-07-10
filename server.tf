@@ -11,9 +11,9 @@ module "database_servers" {
 
 
 
-module "app-servers" {
+module "application_servers" {
   depends_on = [module.database_servers]
-  for_each = var.app_servers
+  for_each = var.application_servers
   source = "./module"
   component_name = each.value["name"]
   env = var.env
