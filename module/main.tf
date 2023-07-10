@@ -36,7 +36,7 @@ resource "null_resource" "provisioner" {
 }
 
 resource "aws_route53_record" "records" {
-#   for_each               = var.component
+#   for_each               = var.component_name
   zone_id = "Z006270827E18HEX0RQPW"
   name    = "${var.component_name}-dev.devoash.tech"
   type    = "A"
